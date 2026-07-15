@@ -1,0 +1,6 @@
+{
+  "name": "Sentinel Research Platform",
+  "description": "An AI-powered research, monitoring, and decision-support platform for smart communities, integrating environmental intelligence, IoT sensors, robotics, GIS mapping, and predictive analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

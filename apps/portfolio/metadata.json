@@ -1,0 +1,6 @@
+{
+  "name": "Sam Lopez - Portfolio",
+  "description": "Interactive, full-stack portfolio of Sam Lopez featuring case studies and live interactive product simulations powered by Gemini AI and interactive state visualization engines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Sentinel AgriMind AI",
+  "description": "The Intelligent Farming Ecosystem for Botolan, Zambales, Philippines featuring AI digital twin, satellite crop stress, pathology crop doctor, hyperlocal weather intelligence, sharing network, and sentinel AI advisor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

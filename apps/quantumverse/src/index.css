@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-quantum-bg: #050816;
+  --color-cyan-glow: #00f3ff;
+  --color-violet-glow: #bd00ff;
+  --color-quantum-blue: #0066ff;
+}
+
+/* Custom glow and holographic utilities */
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 243, 255, 0.6), 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+.glow-violet {
+  text-shadow: 0 0 10px rgba(189, 0, 255, 0.6), 0 0 20px rgba(189, 0, 255, 0.3);
+}
+
+.border-glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 243, 255, 0.15);
+  border-color: rgba(0, 243, 255, 0.3);
+}
+
+.border-glow-violet {
+  box-shadow: 0 0 15px rgba(189, 0, 255, 0.15);
+  border-color: rgba(189, 0, 255, 0.3);
+}
+
+/* Holographic glass panel aesthetics */
+.glass-panel {
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.05) 0%, rgba(5, 8, 22, 0.75) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, box-shadow 0.4s;
+}
+
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.02) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-panel-cyan {
+  background: radial-gradient(circle at 50% 0%, rgba(0, 243, 255, 0.08) 0%, rgba(5, 8, 22, 0.8) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 243, 255, 0.18);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 243, 255, 0.05), inset 0 1px 2px rgba(0, 243, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, box-shadow 0.4s;
+}
+
+.glass-panel-cyan::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 243, 255, 0.1) 0%, transparent 40%, transparent 60%, rgba(0, 243, 255, 0.03) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-panel-violet {
+  background: radial-gradient(circle at 50% 0%, rgba(189, 0, 255, 0.08) 0%, rgba(5, 8, 22, 0.8) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(189, 0, 255, 0.18);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.6), 0 0 15px rgba(189, 0, 255, 0.05), inset 0 1px 2px rgba(189, 0, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s, box-shadow 0.4s;
+}
+
+.glass-panel-violet::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(189, 0, 255, 0.1) 0%, transparent 40%, transparent 60%, rgba(189, 0, 255, 0.03) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Holographic scanner effect */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scanline::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+.hologram-scanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.8), transparent);
+  animation: scan 6s linear infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 243, 255, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 243, 255, 0.6);
+}
+
+
+@theme {
+  --color-quantum-bg: #050816;
+  --color-quantum-cyan: #06b6d4;
+  --color-quantum-violet: #8b5cf6;
+  --color-quantum-blue: #3b82f6;
+  --color-quantum-light: #f8fafc;
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-spin-slow: spin 20s linear infinite;
+  --animate-wave: wave 8s ease-in-out infinite;
+  --animate-glow-pulse: glow-pulse 3s ease-in-out infinite;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(1deg); }
+  }
+  @keyframes wave {
+    0%, 100% { transform: scaleY(1) translateY(0); }
+    50% { transform: scaleY(1.15) translateY(-5px); }
+  }
+  @keyframes glow-pulse {
+    0%, 100% { opacity: 0.3; filter: drop-shadow(0 0 5px rgba(6, 182, 212, 0.4)); }
+    50% { opacity: 0.8; filter: drop-shadow(0 0 15px rgba(139, 92, 246, 0.7)); }
+  }
+}
+
+/* Custom Quantum Interface Styles */
+.quantum-glass {
+  background: rgba(5, 8, 22, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.quantum-glass-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.quantum-glass-hover:hover {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.25);
+  transform: translateY(-2px);
+}
+
+.quantum-glow-cyan {
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.6), 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.quantum-glow-violet {
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.6), 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.quantum-border-cyan {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: inset 0 0 12px rgba(6, 182, 212, 0.1);
+}
+
+.quantum-border-violet {
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: inset 0 0 12px rgba(139, 92, 246, 0.1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.6);
+}
+
+/* LaTeX formula layout styling */
+.latex-font {
+  font-family: "New Computer Modern Math", "Cambria Math", serif;
+  font-style: italic;
+}
+
+/* Quantum Cursor Interaction Enhancements */
+.cursor-hover-active-btn {
+  box-shadow: 0 0 16px rgba(0, 243, 255, 0.25) !important;
+  border-color: rgba(0, 243, 255, 0.5) !important;
+  transform: scale(1.02) translateY(-1px);
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  background-image: radial-gradient(circle at center, rgba(0, 243, 255, 0.08) 0%, transparent 70%) !important;
+}
+
+.cursor-hover-active-card {
+  box-shadow: 0 0 24px rgba(189, 0, 255, 0.15) !important;
+  border-color: rgba(189, 0, 255, 0.4) !important;
+  background-color: rgba(189, 0, 255, 0.02) !important;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Custom Cinematic Nav Transitions Keyframes */
+@keyframes grid-scan {
+  0% { top: 0%; opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+@keyframes light-sweep {
+  0% { transform: translateY(-100%) scaleY(1.5); opacity: 0; }
+  30% { opacity: 0.8; }
+  70% { opacity: 0.8; }
+  100% { transform: translateY(100%) scaleY(0.5); opacity: 0; }
+}
+
+@keyframes orbit-photon {
+  0% { transform: rotate(0deg) translateX(14px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(14px) rotate(-360deg); }
+}
+
+.animate-grid-scan {
+  animation: grid-scan 0.4s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-light-sweep {
+  animation: light-sweep 0.5s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+.animate-orbit-photon {
+  animation: orbit-photon 2.5s linear infinite;
+}
+
