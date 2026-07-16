@@ -44,7 +44,7 @@ export default function About() {
           <div className="lg:col-span-7 space-y-8">
             <div className="space-y-4 font-sans text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
               <p>
-                Through Sammium Tech, I experiment with concepts ranging from AI operating systems to quantum-inspired simulations and research dashboards. My work bridges raw machine learning complexity with highly refined, beautiful user interfaces that anyone can understand.
+              Through Sammium Tech, I experiment with concepts ranging from AI operating systems to quantum-inspired simulations and research dashboards.
               </p>
               <p>
                 My projects target practical, high-impact categories: from local disaster management checklists built for Botolan, Zambales, to smart agriculture co-pilots configured to advise Central Luzon crop cultivation on real-time temperature and soil moisture diagnostics.
