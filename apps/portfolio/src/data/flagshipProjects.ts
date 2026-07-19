@@ -1,4 +1,4 @@
-export type FlagshipProject = {
+﻿export type FlagshipProject = {
   slug: string;
   title: string;
   eyebrow: string;
@@ -12,6 +12,35 @@ export type FlagshipProject = {
 };
 
 export const flagshipProjects: FlagshipProject[] = [
+
+  {
+    slug: "nexusops",
+    title: "Sammium NexusOps",
+    eyebrow: "Event-driven systems integration platform",
+    description:
+      "A production-deployed integration command center that normalizes payment events, persists them in PostgreSQL, routes them through Redis and BullMQ, and processes CRM and Slack actions through a Fastify API and background worker.",
+    preview: "./previews/nexusops-preview.png",
+    demoPath: "https://nexusops-web-production.up.railway.app",
+    tags: [
+      "React",
+      "TypeScript",
+      "Fastify",
+      "PostgreSQL",
+      "Redis",
+      "BullMQ",
+      "OpenAPI",
+      "Docker",
+      "Railway"
+    ],
+    status: "Production Deployment",
+    accent: "cyan",
+    highlights: [
+      "Live Web, API, Worker, PostgreSQL, and Redis services deployed on Railway",
+      "Canonical event normalization, correlation IDs, idempotency, retries, and dead-letter recovery",
+      "Interactive OpenAPI documentation with automated GitHub Actions validation",
+      "End-to-end payment.succeeded processing through a production queue worker"
+    ]
+  },
 {
   slug: "orbitlab-v5",
   title: "Sammium OrbitLab 5.0",
@@ -158,4 +187,5 @@ export const flagshipProjects: FlagshipProject[] = [
 
 export const getFlagshipProject = (slug: string) =>
   flagshipProjects.find((project) => project.slug === slug);
+
 
