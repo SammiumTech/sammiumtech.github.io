@@ -1,16 +1,17 @@
 # Sammium Portfolio Suite
 
-A unified portfolio repository for Sam Lopez and Sammium Tech. The flagship registry currently presents **nine launchable systems**:
+A unified portfolio repository for Sam Lopez and Sammium Tech. The flagship registry currently presents **ten launchable systems**:
 
-1. **Sammium NexusOps** — event-driven integration and automation command platform
-2. **Sammium OrbitLab 5.0** — procedural deep-space exploration simulator
-3. **Sammium SentinelOps** — cyber incident command and response platform
-4. **Sammium QuantumVerse** — immersive quantum learning and scientific visualization
-5. **Sammium AgriMind AI** — agricultural intelligence and farm operations platform
-6. **Sammium Research Lab** — AI research, telemetry, simulation, and experimentation environment
-7. **Sammium Cosmos OS** — interactive cosmic observatory and WebGL science platform
-8. **Sammium Sentinel Sense** — predictive risk-awareness and hazard simulation dashboard
-9. **Sammium AetherVerse** — cinematic holographic command universe with seven functional sectors
+1. **Aether Grid: Genesis Breach** — public-beta third-person science-fiction action game
+2. **Sammium NexusOps** — event-driven integration and automation command platform
+3. **OrbitLabs 6.0: Jovian Frontier** — browser-based Jovian exploration and spacecraft simulator
+4. **Sammium SentinelOps** — cyber incident command and response platform
+5. **Sammium QuantumVerse** — immersive quantum learning and scientific visualization
+6. **Sammium AgriMind AI** — agricultural intelligence and farm operations platform
+7. **Sammium Research Lab** — AI research, telemetry, simulation, and experimentation environment
+8. **Sammium Cosmos OS** — interactive cosmic observatory and WebGL science platform
+9. **Sammium Sentinel Sense** — predictive risk-awareness and hazard simulation dashboard
+10. **Sammium AetherVerse** — cinematic holographic command universe with seven functional sectors
 
 The portfolio combines isolated React/Vite workspaces with externally deployed full-stack projects. Static workspaces are built independently and embedded only when launched. Production services such as AetherVerse remain on Node-compatible hosts and are opened through the same portfolio experience.
 
@@ -74,6 +75,7 @@ npm run build:pages     # runs the complete pipeline
 
 The portfolio uses GitHub Pages-safe hash routes. Examples:
 
+- `#/projects/aether-grid`
 - `#/projects/nexusops`
 - `#/projects/orbitlab-v5`
 - `#/projects/sentinelops`
