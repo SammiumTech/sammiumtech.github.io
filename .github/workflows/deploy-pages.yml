@@ -26,7 +26,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: 22.22.0
+          node-version: 22.2.0
           package-manager-cache: false
 
       - name: Pin stable npm
@@ -46,11 +46,28 @@ jobs:
       - name: Build portfolio and embedded projects
         run: npm run build:pages
 
+      - name: Force include Midnight Circuit WebGL build
+        run: |
+          mkdir -p apps/portfolio/dist/projects/midnight-circuit-webgl
+          cp -R apps/portfolio/public/projects/midnight-circuit-webgl/. apps/portfolio/dist/projects/midnight-circuit-webgl/
+
+      - name: Verify Midnight Circuit WebGL files
+        run: |
+          echo "Checking Midnight Circuit WebGL folder..."
+          ls -la apps/portfolio/dist/projects/midnight-circuit-webgl
+
+          echo "Checking Build folder..."
+          ls -la apps/portfolio/dist/projects/midnight-circuit-webgl/Build
+
+          echo "Checking required files..."
+          test -f apps/portfolio/dist/projects/midnight-circuit-webgl/index.html
+          test -f apps/portfolio/dist/projects/midnight-circuit-webgl/Build/MidnightCircuit-WebGL.loader.js
+
       - name: Configure GitHub Pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v5
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
         with:
           path: apps/portfolio/dist
 
@@ -64,4 +81,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
