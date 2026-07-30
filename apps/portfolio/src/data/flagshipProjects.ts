@@ -19,7 +19,61 @@ export type FlagshipProject = {
 };
 
 export const flagshipProjects: FlagshipProject[] = [
-
+{
+  slug: "midnight-circuit",
+  title: "Midnight Circuit",
+  eyebrow: "Unity racing prototype · Final build",
+  description:
+    "A futuristic Unity street racing prototype built through 10 development phases. It features vehicle customization, police pursuit, city hub markers, adaptive graphics, and GT 1030 performance optimization.",
+  preview: "./previews/midnight-circuit.webp",
+  demoPath: "#",
+  sourcePath: "#",
+  accent: "cyan",
+  tags: [
+    "Unity",
+    "C#",
+    "Game Systems",
+    "Optimization",
+    "UI/UX",
+  ],
+  status: "Production Deployment",
+  highlights: [
+    "Built through 10 complete development phases",
+    "Garage customization with paint, underglow, stance, and spoilers",
+    "Police pursuit system with heat levels",
+    "Open city hub and district map",
+    "Adaptive 100 FPS target and GT 1030 Safe mode",
+  ],
+},
+  {
+    slug: "aether-grid",
+    title: "Aether Grid: Genesis Breach",
+    eyebrow: "Third-person sci-fi action game · Public beta",
+    description:
+      "An original browser-based third-person science-fiction action game featuring tactical combat, adaptive enemy formations, environmental abilities, a multi-phase boss encounter, persistent progression, accessibility options, and a high-speed Flux Cycle escape.",
+    preview: "./previews/aether-grid-beta.webp",
+    demoPath: "https://zelop301.github.io/aether-grid-phase23/",
+    sourcePath: "https://github.com/zelop301/aether-grid-phase23",
+    deploymentNote:
+      "Public beta under active development. Character animation, combat balance, browser performance, and level composition will continue to improve through player testing and feedback.",
+    tags: [
+      "React",
+      "Vite",
+      "Three.js",
+      "React Three Fiber",
+      "Zustand",
+      "WebGL",
+      "GitHub Pages",
+    ],
+    status: "Public Beta",
+    accent: "cyan",
+    highlights: [
+      "Genesis Breach campaign with adaptive tactical combat and environmental Aether Conduits",
+      "Three-phase Grid Warden boss, parry and dodge systems, Vector Disc, and finishers",
+      "Flux Cycle escape sequence with boost, drift, driving assistance, and optional autopilot",
+      "Validated checkpoints, local progression, contracts, controller support, and accessibility settings",
+    ],
+  },
   {
     slug: "aether-grid",
     title: "Aether Grid: Genesis Breach",
@@ -246,9 +300,37 @@ export const flagshipProjects: FlagshipProject[] = [
     ],
   },
 
+{
+  slug: "midnight-circuit",
+  title: "Midnight Circuit",
+  eyebrow: "Unity racing prototype · Final build",
+  description:
+    "A futuristic Unity street racing prototype built through 10 development phases. It features vehicle customization, police pursuit, city hub markers, adaptive graphics, and GT 1030 performance optimization.",
+  preview: "./previews/midnight-circuit.webp",
+  demoPath: "#",
+  sourcePath: "#",
+  tags: [
+    "Unity",
+    "C#",
+    "Game Systems",
+    "Optimization",
+    "UI/UX",
+  ],
+  status: "Production Deployment",
+  accent: "cyan",
+  highlights: [
+    "Built through 10 complete development phases",
+    "Garage customization with paint, underglow, stance, and spoilers",
+    "Police pursuit system with heat levels",
+    "Open city hub and district map",
+    "Adaptive 100 FPS target and GT 1030 Safe mode",
+  ],
+},
+ 
 ];
 
 export const getFlagshipProject = (slug: string) =>
   flagshipProjects.find((project) => project.slug === slug);
+
 
 
