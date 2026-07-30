@@ -19,59 +19,34 @@ export type FlagshipProject = {
 };
 
 export const flagshipProjects: FlagshipProject[] = [
-{
-  slug: "midnight-circuit",
-  title: "Midnight Circuit",
-  eyebrow: "Unity racing prototype · Final build",
-  description:
-    "A futuristic Unity street racing prototype built through 10 development phases. It features vehicle customization, police pursuit, city hub markers, adaptive graphics, and GT 1030 performance optimization.",
-  preview: "./previews/midnight-circuit.webp",
-  demoPath: "#",
-  sourcePath: "#",
-  accent: "cyan",
-  tags: [
-    "Unity",
-    "C#",
-    "Game Systems",
-    "Optimization",
-    "UI/UX",
-  ],
-  status: "Production Deployment",
-  highlights: [
-    "Built through 10 complete development phases",
-    "Garage customization with paint, underglow, stance, and spoilers",
-    "Police pursuit system with heat levels",
-    "Open city hub and district map",
-    "Adaptive 100 FPS target and GT 1030 Safe mode",
-  ],
-},
   {
-    slug: "aether-grid",
-    title: "Aether Grid: Genesis Breach",
-    eyebrow: "Third-person sci-fi action game · Public beta",
+    slug: "midnight-circuit",
+    title: "Midnight Circuit",
+    eyebrow: "Unity racing prototype · Playable WebGL build",
     description:
-      "An original browser-based third-person science-fiction action game featuring tactical combat, adaptive enemy formations, environmental abilities, a multi-phase boss encounter, persistent progression, accessibility options, and a high-speed Flux Cycle escape.",
-    preview: "./previews/aether-grid-beta.webp",
-    demoPath: "https://zelop301.github.io/aether-grid-phase23/",
-    sourcePath: "https://github.com/zelop301/aether-grid-phase23",
+      "A futuristic Unity street racing prototype built through 10 development phases. It features vehicle customization, police pursuit, city hub markers, adaptive graphics, and GT 1030 performance optimization.",
+    preview: "./previews/midnight-circuit.webp",
+    demoPath: "./projects/midnight-circuit-webgl/index.html",
+    sourcePath: "",
     deploymentNote:
-      "Public beta under active development. Character animation, combat balance, browser performance, and level composition will continue to improve through player testing and feedback.",
+      "Playable Unity WebGL build embedded in the portfolio. This project will continue to improve through future vehicle, map, and performance updates.",
     tags: [
-      "React",
-      "Vite",
-      "Three.js",
-      "React Three Fiber",
-      "Zustand",
+      "Unity",
+      "C#",
       "WebGL",
-      "GitHub Pages",
+      "Game Systems",
+      "Optimization",
+      "UI/UX",
     ],
-    status: "Public Beta",
+    status: "Production Deployment",
     accent: "cyan",
     highlights: [
-      "Genesis Breach campaign with adaptive tactical combat and environmental Aether Conduits",
-      "Three-phase Grid Warden boss, parry and dodge systems, Vector Disc, and finishers",
-      "Flux Cycle escape sequence with boost, drift, driving assistance, and optional autopilot",
-      "Validated checkpoints, local progression, contracts, controller support, and accessibility settings",
+      "Playable Unity WebGL browser build",
+      "Built through 10 complete development phases",
+      "Garage customization with paint, underglow, stance, and spoilers",
+      "Police pursuit system with heat levels",
+      "Open city hub and district map",
+      "Adaptive 100 FPS target and GT 1030 Safe mode",
     ],
   },
   {
@@ -120,7 +95,7 @@ export const flagshipProjects: FlagshipProject[] = [
       "BullMQ",
       "OpenAPI",
       "Docker",
-      "Railway"
+      "Railway",
     ],
     status: "Production Deployment",
     accent: "cyan",
@@ -128,59 +103,58 @@ export const flagshipProjects: FlagshipProject[] = [
       "Live Web, API, Worker, PostgreSQL, and Redis services deployed on Railway",
       "Canonical event normalization, correlation IDs, idempotency, retries, and dead-letter recovery",
       "Interactive OpenAPI documentation with automated GitHub Actions validation",
-      "End-to-end payment.succeeded processing through a production queue worker"
-    ]
+      "End-to-end payment.succeeded processing through a production queue worker",
+    ],
   },
-{
-  slug: "orbitlabs-jovian-frontier",
-  title: "OrbitLabs 6.0: Jovian Frontier",
-  eyebrow: "Jovian Exploration · Spacecraft Simulation · Scientific Computing",
-  description:
-    "A browser-based Jovian exploration and spacecraft-systems simulator featuring third-person flight, adaptive autopilot, scientific missions, crew command, radiation hazards, procedural audio, and a twelve-mission campaign across Jupiter and its moons.",
-  preview: "./previews/orbitlabs-jovian-frontier.png",
-  demoPath: "https://zelop301.github.io/sammium-orbitlab/",
-  tags: [
-    "Three.js",
-    "WebGL",
-    "JavaScript",
-    "Procedural Audio",
-    "Space Simulation",
-    "GitHub Pages",
-  ],
- status: "Product Prototype",
-  accent: "cyan",
-  highlights: [
-    "Third-person Pathfinder-07 flight with stabilized chase camera",
-    "Adaptive autopilot, station keeping, orbital guidance, and scientific instruments",
-    "Twelve-mission campaign featuring Jupiter, its moons, a black hole, and an alien mothership",
-  ],
-},
-{
-  slug: "sentinelops",
-  title: "Sammium SentinelOps",
-  eyebrow: "Cyber incident command platform",
-  description:
-    "A full-stack cyber incident command and response platform featuring secure authentication, role-based access, live threat alerts, incident workflows, evidence management, audit trails, and real-time WebSocket synchronization.",
-  preview: "./previews/sentinelops-preview.png",
-  demoPath: "https://sammium-sentinelops.onrender.com",
-  tags: [
-    "React",
-    "TypeScript",
-    "Node.js",
-    "WebSockets",
-    "JWT",
-    "RBAC",
-    "Cybersecurity",
-  ],
-  status: "Product Prototype",
-  accent: "cyan",
-  highlights: [
-    "Real-time incident response and threat-alert synchronization",
-    "JWT authentication with Administrator, Analyst, and Viewer roles",
-    "Evidence management, analyst timelines, and attributable audit trails",
-  ],
-},
- 
+  {
+    slug: "orbitlabs-jovian-frontier",
+    title: "OrbitLabs 6.0: Jovian Frontier",
+    eyebrow: "Jovian Exploration · Spacecraft Simulation · Scientific Computing",
+    description:
+      "A browser-based Jovian exploration and spacecraft-systems simulator featuring third-person flight, adaptive autopilot, scientific missions, crew command, radiation hazards, procedural audio, and a twelve-mission campaign across Jupiter and its moons.",
+    preview: "./previews/orbitlabs-jovian-frontier.png",
+    demoPath: "https://zelop301.github.io/sammium-orbitlab/",
+    tags: [
+      "Three.js",
+      "WebGL",
+      "JavaScript",
+      "Procedural Audio",
+      "Space Simulation",
+      "GitHub Pages",
+    ],
+    status: "Product Prototype",
+    accent: "cyan",
+    highlights: [
+      "Third-person Pathfinder-07 flight with stabilized chase camera",
+      "Adaptive autopilot, station keeping, orbital guidance, and scientific instruments",
+      "Twelve-mission campaign featuring Jupiter, its moons, a black hole, and an alien mothership",
+    ],
+  },
+  {
+    slug: "sentinelops",
+    title: "Sammium SentinelOps",
+    eyebrow: "Cyber incident command platform",
+    description:
+      "A full-stack cyber incident command and response platform featuring secure authentication, role-based access, live threat alerts, incident workflows, evidence management, audit trails, and real-time WebSocket synchronization.",
+    preview: "./previews/sentinelops-preview.png",
+    demoPath: "https://sammium-sentinelops.onrender.com",
+    tags: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "WebSockets",
+      "JWT",
+      "RBAC",
+      "Cybersecurity",
+    ],
+    status: "Product Prototype",
+    accent: "cyan",
+    highlights: [
+      "Real-time incident response and threat-alert synchronization",
+      "JWT authentication with Administrator, Analyst, and Viewer roles",
+      "Evidence management, analyst timelines, and attributable audit trails",
+    ],
+  },
   {
     slug: "quantumverse",
     title: "Sammium QuantumVerse",
@@ -299,38 +273,7 @@ export const flagshipProjects: FlagshipProject[] = [
       "Adaptive graphics, persistent progression, and secure API services",
     ],
   },
-
-{
-  slug: "midnight-circuit",
-  title: "Midnight Circuit",
-  eyebrow: "Unity racing prototype · Final build",
-  description:
-    "A futuristic Unity street racing prototype built through 10 development phases. It features vehicle customization, police pursuit, city hub markers, adaptive graphics, and GT 1030 performance optimization.",
-  preview: "./previews/midnight-circuit.webp",
-  demoPath: "#",
-  sourcePath: "#",
-  tags: [
-    "Unity",
-    "C#",
-    "Game Systems",
-    "Optimization",
-    "UI/UX",
-  ],
-  status: "Production Deployment",
-  accent: "cyan",
-  highlights: [
-    "Built through 10 complete development phases",
-    "Garage customization with paint, underglow, stance, and spoilers",
-    "Police pursuit system with heat levels",
-    "Open city hub and district map",
-    "Adaptive 100 FPS target and GT 1030 Safe mode",
-  ],
-},
- 
 ];
 
 export const getFlagshipProject = (slug: string) =>
   flagshipProjects.find((project) => project.slug === slug);
-
-
-
