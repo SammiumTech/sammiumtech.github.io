@@ -46,6 +46,11 @@ jobs:
       - name: Build portfolio and embedded projects
         run: npm run build:pages
 
+      - name: Restore Midnight Circuit WebGL source
+        run: |
+          git restore --source=HEAD -- apps/portfolio/public/projects/midnight-circuit-webgl
+          test -d apps/portfolio/public/projects/midnight-circuit-webgl
+
       - name: Force include Midnight Circuit WebGL build
         run: |
           mkdir -p apps/portfolio/dist/projects/midnight-circuit-webgl
