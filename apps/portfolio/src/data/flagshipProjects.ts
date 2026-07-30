@@ -26,7 +26,7 @@ export const flagshipProjects: FlagshipProject[] = [
     description:
       "A futuristic Unity street racing prototype built through 10 development phases. It features vehicle customization, police pursuit, city hub markers, adaptive graphics, and GT 1030 performance optimization.",
     preview: "./previews/midnight-circuit.webp",
-    demoPath: "./projects/midnight-circuit-webgl/index.html",
+    demoPath: "/projects/midnight-circuit-webgl/index.html",
     sourcePath: "",
     deploymentNote:
       "Playable Unity WebGL build embedded in the portfolio. This project will continue to improve through future vehicle, map, and performance updates.",
