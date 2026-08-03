@@ -10,3 +10,6 @@ apps/portfolio/public/projects/
 .portfolio-backups/
 
 .portfolio-backups/
+
+# Visual Studio temporary files
+.vs/

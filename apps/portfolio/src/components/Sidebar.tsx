@@ -25,12 +25,13 @@ export default function Sidebar() {
   };
 
   const skillsData = [
-    { category: "Programming", skills: ["HTML5", "CSS3", "JavaScript", "SQL"] },
-    { category: "Frontend", skills: ["React", "Tailwind CSS", "Vite"] },
-    { category: "Backend", skills: ["Node.js", "Express.js", "REST APIs"] },
-    { category: "Database", skills: ["PostgreSQL", "MySQL"] },
-    { category: "Design", skills: ["Figma", "UI/UX", "Canva"] },
-    { category: "Tools & AI", skills: ["Git", "GitHub", "Prompt Engineering", "AI Studio"] }
+    { category: "Languages", skills: ["TypeScript", "JavaScript", "C#", "SQL"] },
+    { category: "Frontend", skills: ["React 19", "Tailwind CSS 4", "Vite", "Motion"] },
+    { category: "Backend", skills: ["Node.js", "Express", "Fastify", "OpenAPI"] },
+    { category: "3D & Games", skills: ["Unity", "Three.js", "React Three Fiber", "WebGL"] },
+    { category: "Data & Real-Time", skills: ["PostgreSQL", "Redis", "BullMQ", "WebSockets"] },
+    { category: "AI & Visualization", skills: ["Gemini API", "D3.js", "Recharts", "Prompt Engineering"] },
+    { category: "Delivery & Security", skills: ["Docker", "GitHub Actions", "JWT", "RBAC"] }
   ];
 
   return (
